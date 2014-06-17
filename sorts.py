@@ -8,15 +8,16 @@ Author: Tomjo Soptame
 Date: 6/17/2014
 '''
 
+
 # Insertion Sort Algorithm
 def insertion_sort(lst):
     print lst
     if type(lst) is str:  # Check to see if the arg type is a string
         lst = [l for l in lst]
     i = 0  # Initial counter to iterate through list
-    n = len(lst) # The upper limit of the list
+    n = len(lst)  # The upper limit of the list
     while i < n:
-        j = i # Second counter to help keep track of current and current -1
+        j = i  # Second counter to help keep track of current and current -1
         while j > 0 and lst[j] < lst[j-1]:
             cpy = lst[j]
             cpy_1 = lst[j-1]
@@ -44,6 +45,7 @@ def selection_sort(lst):
 def main():
     print insertion_sort("INSERTIONSORT")
     print selection_sort("SELECTIONSORT")
+
 # Only run the program if we're in the
 # if it's not being imported as a module.
 if __name__ == '__main__':

@@ -19,6 +19,9 @@ def insertion_sort(lst):
     while i < n:
         j = i  # Second counter to help keep track of current and current -1
         while j > 0 and lst[j] < lst[j-1]:
+            # Sorting/swapping logic
+            # Basically if current < previous
+            # swap their order.
             cpy = lst[j]
             cpy_1 = lst[j-1]
             lst[j] = cpy_1

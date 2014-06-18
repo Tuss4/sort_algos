@@ -6,6 +6,7 @@ by Steven S. Skiena
 
 Author: Tomjo Soptame
 Date: 6/17/2014
+Last Modified: 6/18/2014
 '''
 
 
@@ -43,11 +44,34 @@ def selection_sort(lst):
     return sort_lst
 
 
+# Merge Sort Algorithm
+def merge_sort(lst, low=None, high=None):
+    print lst
+    if type(lst) is str:
+        lst = [l for l in lst]
+
+    def merge(lst, low, middle, high):
+        pass
+
+    if not low and not high:
+        low = 0
+        high = len(lst)
+
+    if low < high:
+        middle = (low + high) / 2
+        mergesort(lst, low, middle)
+        mergesort(lst, middle+1, high)
+        merge(lst, low, middle, high)
+
+    return None
+
+
 # The main function
 # to run the program
 def main():
     print insertion_sort("INSERTIONSORT")
     print selection_sort("SELECTIONSORT")
+    print merge_sort("MERGESORT")
 
 # Only run the program if we're in the
 # if it's not being imported as a module.

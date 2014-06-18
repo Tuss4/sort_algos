@@ -49,7 +49,11 @@ def merge_sort(lst, low=None, high=None):
     print lst
     if type(lst) is str:
         lst = [l for l in lst]
+    new_lst = []
 
+    # Essentially we want to sort out the halves
+    # Probably implement some form of the swap logic
+    # used in insertion_sort.
     def merge(lst, low, middle, high):
         pass
 
@@ -63,7 +67,7 @@ def merge_sort(lst, low=None, high=None):
         mergesort(lst, middle+1, high)
         merge(lst, low, middle, high)
 
-    return None
+    return new_lst
 
 
 # The main function
